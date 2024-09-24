@@ -1,0 +1,82 @@
+POST  http://localhost:42797/odata/v4/hana-service/EmpSrv
+Content-Type: application/json
+
+{
+   "ID":"4",
+   "CHECK_NAME":"Arbitary",
+   "TYPE_NAME_kind":"1",
+   "TYPE_NAME_fName":"Sumit",
+   "TYPE_NAME_lNAme":"Jhalidyal",
+   "OTHER_TYPE_NAME_kind":"2",
+   "OTHER_TYPE_NAME_fName":"Vishal",
+   "OTHER_TYPE_NAME_lNAme":"Patra"
+
+
+}
+
+#####
+
+POST http://localhost:37133/odata/v4/hana-service/workerSrv
+Content-Type: application/json
+
+{
+   "ID":"2",
+   "Name":"Amit"
+
+
+
+}
+
+####
+POST http://localhost:37133/odata/v4/hana-service/addressSrv
+Content-Type: application/json
+
+{
+   "ID":"800",
+   "owner_ID":"2",
+   "address1":"add99",
+   "address2":"add0000"
+
+ 
+}
+
+####
+GET http://localhost:37133/odata/v4/hana-service/workerSrv
+
+
+###
+POST  http://localhost:4004/odata/v4/attachments/Files
+Content-Type: application/json
+
+{
+  "ID": "b37a92ef-c888-4cf1-b0ad-36fdd61f7174",
+  "createdAt": "2024-09-23T18:34:51.668Z",
+  "createdBy": "anonymous",
+  "modifiedAt": "2024-09-23T18:34:52.078Z",
+  "modifiedBy": "anonymous",
+  "student_ID": "1",
+  "mediaType": "text/csv",
+  "fileName": "employeeSrv.csv",
+  "size": 101,
+  "DocTypeID":"PAN",
+  "url": "/odata/v4/attachments/Files(b37a92ef-c888-4cf1-b0ad-36fdd61f7174)/content"
+}
+
+
+###
+
+POST  http://localhost:4004/odata/v4/attachments/studentSrv
+Content-Type: application/json
+
+{
+   "ID":"1",
+   "name":"Sumit"
+   
+
+}
+
+###
+GET http://localhost:4004/odata/v4/attachments/Files
+
+### 
+GET http://localhost:4004/odata/v4/attachments/getAttachmentsForStudent
